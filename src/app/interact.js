@@ -62,7 +62,6 @@ export default function Interact(props) {
 
     return(
         <div>
-           <h2>hiii</h2>
         </div>
     );
 }

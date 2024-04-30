@@ -93,7 +93,7 @@ export default function Home() {
           setIntMedINC(parseInt(res));
         }
         if(partyIndex == 5){
-          setVoteNPP(parseInt(res));        <Image src="/images/AAP.png" alt='test' width={50} height={50}/>
+          setVoteNPP(parseInt(res));        
           setIntMedNPP(parseInt(res));
         }
     }).catch((err) => {
@@ -103,45 +103,35 @@ export default function Home() {
 
   return (
     <div className="my-28">
-      <div>
-        <div class="flex items-center">
-          <Image className="ml-3 mr-6" src="/images/AAP.png" alt='test' width={50} height={50}/>
-          <h2 className=" text-lg font-custom">Aam Aadmi Party: {AamAadmiParty}</h2>
-          <button class="bg-red-500 rounded-lg text-sm px-3 py-2 text-center text-white me-2 mb-2 mx-36 my-3" onClick={() => {votingIncrease(0, AamAadmiParty + 1)}}>Vote</button>
-        </div>
-        <div class="flex items-center">
-          <Image className="ml-3 mr-6" src="/images/BSP.png" alt='test' width={50} height={50}/>
-          <h2 className=" text-lg font-custom">Bahujan Samaj Party: {BahujanSamajParty}</h2>
-          <button class="bg-red-500 rounded-lg text-sm px-3 py-2 text-center text-white me-2 mb-2 mx-20 my-3" onClick={() => {votingIncrease(1, BahujanSamajParty + 1)}}>Vote</button>
+      <div className="flex justify-center">
+        <div className="flex flex-col">
+          <Image className="mb-2" src="/images/AAP.png" alt='test' width={50} height={50}/>
+          <Image className="my-2" src="/images/BSP.png" alt='test' width={50} height={50}/>
+          <Image className="my-2" src="/images/BJP.png" alt='test' width={50} height={50}/>
+          <Image className="my-2" src="/images/CP.png" alt='test' width={50} height={50}/>
+          <Image className="my-2" src="/images/INC.png" alt='test' width={50} height={50}/>
+          <Image className="mt-2" src="/images/NPP.png" alt='test' width={50} height={50}/>
         </div>
 
-        <div class="flex items-center">
-          <Image className="ml-3 mr-6" src="/images/BJP.png" alt='test' width={50} height={50}/>
-          <h2 className=" text-lg font-custom">Bharatiya Janata Party: {BharatiyaJanataParty}</h2>
-          <button class="bg-red-500 rounded-lg text-sm px-3 py-2 text-center text-white me-2 mb-2 mx-14 my-3" onClick={() => {votingIncrease(2, BharatiyaJanataParty + 1)}}>Vote</button>
+        <div className="flex flex-col ml-12">
+          <h2 className="text-lg font-custom mt-2">Aam Aadmi Party: {AamAadmiParty}</h2>
+          <h2 className="text-lg font-custom mt-9">Bahujan Samaj Party: {BahujanSamajParty}</h2>
+          <h2 className="text-lg font-custom mt-10">Bharatiya Janata Party: {BharatiyaJanataParty}</h2>
+          <h2 className="text-lg font-custom mt-11">Communist Party: {CommunistParty}</h2>
+          <h2 className="text-lg font-custom mt-11">Indian National Congress: {IndianNationalCongress}</h2>
+          <h2 className="text-lg font-custom mt-9">National Peoples Party: {NationalPeoplesParty}</h2>
         </div>
-
-        <div class="flex items-center">
-          <Image className="ml-3 mr-6" src="/images/CP.png" alt='test' width={50} height={50}/>
-          <h2 className=" text-lg font-custom">Communist Party: {CommunistParty}</h2>
-          <button class="bg-red-500 rounded-lg text-sm px-3 py-2 text-center text-white me-2 mb-2 mx-36 my-3" onClick={() => {votingIncrease(3, CommunistParty + 1)}}>Vote</button>
-        </div>
-
-        <div class="flex items-center">
-          <Image className="ml-3 mr-6" src="/images/INC.png" alt='test' width={50} height={50}/>
-          <h2 className=" text-lg font-custom">Indian National Congress: {IndianNationalCongress}</h2>
-          <button class="bg-red-500 rounded-lg text-sm px-3 py-2 text-center text-white me-2 mb-2 mx-10 my-3" onClick={() => {votingIncrease(4, IndianNationalCongress + 1)}}>Vote</button>
-        </div>
-
-        <div class="flex items-center">
-          <Image className="ml-3 mr-6" src="/images/NPP.png" alt='test' width={50} height={50}/>
-          <h2 className=" text-lg font-custom">National Peoples Party: {NationalPeoplesParty}</h2>
-          <button class="bg-red-500 rounded-lg text-sm px-3 py-2 text-center text-white me-2 mb-2 mx-16 my-3" onClick={() => {votingIncrease(5, NationalPeoplesParty + 1)}}>Vote</button>
+        
+        <div className="flex flex-col ml-20">
+        <button className="bg-red-500 rounded-lg text-sm px-3 py-2 text-center text-white mt-1" onClick={() => {votingIncrease(0, AamAadmiParty + 1)}}>Vote</button>
+        <button className="bg-red-500 rounded-lg text-sm px-3 py-2 text-center text-white mt-7" onClick={() => {votingIncrease(1, BahujanSamajParty + 1)}}>Vote</button>
+        <button className="bg-red-500 rounded-lg text-sm px-3 py-2 text-center text-white mt-8" onClick={() => {votingIncrease(2, BharatiyaJanataParty + 1)}}>Vote</button>
+        <button className="bg-red-500 rounded-lg text-sm px-3 py-2 text-center text-white mt-9" onClick={() => {votingIncrease(3, CommunistParty + 1)}}>Vote</button>
+        <button className="bg-red-500 rounded-lg text-sm px-3 py-2 text-center text-white mt-9" onClick={() => {votingIncrease(4, IndianNationalCongress + 1)}}>Vote</button>
+        <button className="bg-red-500 rounded-lg text-sm px-3 py-2 text-center text-white mt-7" onClick={() => {votingIncrease(5, NationalPeoplesParty + 1)}}>Vote</button>
         </div>
       </div>
-      <br></br>
-      <br></br>
-      <br></br>
+
       <Interact 
         AamAadmiParty={AamAadmiParty}
         BahujanSamajParty={BahujanSamajParty}
