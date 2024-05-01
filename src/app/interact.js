@@ -4,7 +4,7 @@ import contractABI from './../../contractABI.json';
 const ethers = require('ethers');
 
 export default function Interact(props) {
-    let {
+    const {
         AamAadmiParty,
         BahujanSamajParty,
         BharatiyaJanataParty,
