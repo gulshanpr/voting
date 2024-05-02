@@ -34,21 +34,33 @@ export default function Home() {
   function votingIncrease(partyIndex, increase){
     if(partyIndex == 0){
       setVoteAAP(increase);
+      const audio = new Audio('/audio/AAP.mp3');
+      audio.play();
     }
     if(partyIndex == 1){
       setVoteBSP(increase);
+      const audio = new Audio('/audio/BSP.mp3');
+      audio.play();
     }
     if(partyIndex == 2){
       setVoteBJP(increase);
+      const audio = new Audio('/audio/BJP.mp3');
+      audio.play();
     }
     if(partyIndex == 3){
       setVoteCP(increase);
+      const audio = new Audio('/audio/CP.mp3');
+      audio.play();
     }
     if(partyIndex == 4){
       setVoteINC(increase);
+      const audio = new Audio('/audio/INC.mp3');
+      audio.play();
     }
     if(partyIndex == 5){
       setVoteNPP(increase);
+      const audio = new Audio('/audio/NPP.mp3');
+      audio.play();
     }
   }
   useEffect(() => {
@@ -105,12 +117,12 @@ export default function Home() {
     <div className="my-16">
       <div className="flex justify-center">
         <div className="flex flex-col ml-2">
-          <Image className="mb-4" src="/images/AAP.png" alt='test' width={80} height={50}/>
-          <Image className="my-4" src="/images/BSP.png" alt='test' width={80} height={50}/>
-          <Image className="my-4" src="/images/BJP.png" alt='test' width={80} height={50}/>
-          <Image className="my-4" src="/images/CP.png" alt='test' width={80} height={50}/>
-          <Image className="my-4" src="/images/INC.png" alt='test' width={80} height={50}/>
-          <Image className="mt-4" src="/images/NPP.png" alt='test' width={80} height={50}/>
+          <Image className="mb-4" src="/images/AAP.png"  width={80} height={80}/>
+          <Image className="my-4" src="/images/BSP.png" width={80} height={80}/>
+          <Image className="my-4" src="/images/BJP.png" width={80} height={80}/>
+          <Image className="my-4" src="/images/CP.png" width={80} height={80}/>
+          <Image className="my-4" src="/images/INC.png" width={80} height={80}/>
+          <Image className="mt-4" src="/images/NPP.png" width={80} height={80}/>
         </div>
 
         <div className=" ml-4">
