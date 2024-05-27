@@ -126,6 +126,16 @@ export default function Home() {
     }
   }
   useEffect(() => {
+    toast(
+      "Vote as much as you want and make sure your party wins 😉👀",
+      {
+        autoClose: 2000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        progress: undefined,
+      }
+    );
     setTimeout(() => {
       getYourPartysVote(0);
       getYourPartysVote(1);
