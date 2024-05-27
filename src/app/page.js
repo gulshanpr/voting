@@ -1,6 +1,8 @@
 'use client'
 require('dotenv').config();
 import Image from "next/image";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import contractABI from './../../contractABI.json';
 import Interact from "./interact";
 import { useEffect, useState } from "react";
@@ -35,31 +37,91 @@ export default function Home() {
     if(partyIndex == 0){
       setVoteAAP(increase);
       const audio = new Audio('/audio/AAP.mp3');
+      toast(
+        "Arvind Kejriwal is the CM of Delhi, and audio is from his speech in parliament telling other parties to do there work.",
+        {
+          autoClose: 2000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          progress: undefined,
+        }
+      );
       audio.play();
     }
     if(partyIndex == 1){
       setVoteBSP(increase);
       const audio = new Audio('/audio/BSP.mp3');
+      toast(
+        "Kumari Mayawati is the President of BSP, and in a speech she was announcing Dolly Yadav for election candidate.",
+        {
+          autoClose: 2000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          progress: undefined,
+        }
+      );
       audio.play();
     }
     if(partyIndex == 2){
       setVoteBJP(increase);
       const audio = new Audio('/audio/BJP.mp3');
+      toast(
+        "Narendra Modi is the PM of india, and he was poking other parties in his speech.",
+        {
+          autoClose: 2000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          progress: undefined,
+        }
+      );
       audio.play();
     }
     if(partyIndex == 3){
       setVoteCP(increase);
       const audio = new Audio('/audio/CP.mp3');
+      toast(
+        "Sitaram Yechury is General Secretary of the Communist Party of India, Khaniya Kumar was the party member before 2021 and audio is of his fanboy.",
+        {
+          autoClose: 2000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          progress: undefined,
+        }
+      );
       audio.play();
     }
     if(partyIndex == 4){
       setVoteINC(increase);
       const audio = new Audio('/audio/INC.mp3');
+      toast(
+        "Rahul Gandhi was the President of the Indian National Congress, and audio is from his interview.",
+        {
+          autoClose: 2000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          progress: undefined,
+        }
+      );
       audio.play();
     }
     if(partyIndex == 5){
       setVoteNPP(increase);
       const audio = new Audio('/audio/NPP.mp3');
+      toast(
+        "Conrad Sangma is the President NPP and CM of Meghalaya, audio is of his wife being nervous few hours before results.",
+        {
+          autoClose: 2000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          progress: undefined,
+        }
+      );
       audio.play();
     }
   }
@@ -115,6 +177,7 @@ export default function Home() {
 
   return (
     <div className="my-16">
+      <ToastContainer/>
       <div className="flex justify-center">
         <div className="flex flex-col ml-2">
           <Image className="mb-4" src="/images/AAP.png"  width={80} height={80}/>
