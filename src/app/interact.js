@@ -40,6 +40,7 @@ export default function Interact(props) {
 
 
     useEffect(() => {
+        console.log("hii");
     },[]);
 
 
@@ -64,4 +65,5 @@ export default function Interact(props) {
         <div>
         </div>
     );
+    
 }
